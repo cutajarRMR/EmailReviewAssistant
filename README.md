@@ -9,7 +9,7 @@ There is an input text box to paste or type your email content, and buttons to s
 Press "Review Email" to get the improved email.
 
 ## Keys
-Requires [HuggingFace](https://huggingface.co/settings/tokens) or [OpenAI API](https://platform.openai.com/account/api-keys) key
+Requires [HuggingFace](https://huggingface.co/settings/tokens) or [OpenAI API](https://platform.openai.com/account/api-keys) key. 
 Set the environment variable HUGGINGFACE_API_KEY or OpenAI_API_KEY accordingly or have a .env file in the working area.
 
 
