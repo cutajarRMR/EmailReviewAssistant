@@ -12,12 +12,16 @@ def review_email(email, mode='huggingface'):
 
     if mode == 'openai':
         hf_api_key = os.getenv("OpenAI_API_KEY")
+        if hf_api_key is None:
+            raise ValueError("Please set the OpenAI_API_KEY environment variable for OpenAI mode.")
         client = OpenAI(
             api_key=hf_api_key,
         )
         model = "gpt-4o"
     else:
         hf_api_key = os.getenv("HUGGINGFACE_API_KEY")
+        if hf_api_key is None:
+            raise ValueError("Please set the HUGGINGFACE_API_KEY environment variable for HuggingFace mode.")
         client = OpenAI(
             base_url="https://router.huggingface.co/v1",
             api_key=hf_api_key,
